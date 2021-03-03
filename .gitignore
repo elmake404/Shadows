@@ -58,3 +58,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+Echochrome/Library/
+Echochrome/obj/
+Echochrome/Temp/
