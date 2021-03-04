@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shadow : MonoBehaviour
 {
     [SerializeField]
-    private Transform _shodow;
+    private Transform _shadow;
     [SerializeField]
     private MeshFilter _mesh;
     [SerializeField]
@@ -16,6 +16,10 @@ public class Shadow : MonoBehaviour
     private void FixedUpdate()
     {
 
+    }
+    public Vector3 InverseShodow(Vector3 position)
+    {
+       return  _shadow.InverseTransformPoint(position);
     }
     public Vector3[] GetMeshVerticesGlobal()
     {

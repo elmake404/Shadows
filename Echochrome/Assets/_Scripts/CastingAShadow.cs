@@ -17,7 +17,7 @@ public class CastingAShadow : MonoBehaviour
     void Start()
     {
         Shading();
-        Debug.Log(_shadow.transform.position.z - _lightbulb.position.z);
+
     }
 
     void FixedUpdate()
@@ -33,9 +33,10 @@ public class CastingAShadow : MonoBehaviour
         {
             Vector3 direction = (vertices[i] - _lightbulb.position);
 
+            Debug.DrawRay(_lightbulb.position, direction*10,Color.yellow);
             newVertices[i] = _lightbulb.position + ((direction) *
                             ((_leg) / direction.z));
-            newVertices[i] = _shadow.transform.InverseTransformPoint(newVertices[i]);
+            newVertices[i] = _shadow.InverseShodow(newVertices[i]);
         }
         _shadow.SetMeshVertices(newVertices);
         _shadow.SetPointCollider(newVertices);
