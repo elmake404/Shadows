@@ -8,26 +8,18 @@ public class Shadow : MonoBehaviour
     private Transform _shodow;
     [SerializeField]
     private MeshFilter _mesh;
+    [SerializeField]
+    private EdgeCollider2D _edgeCollider;
     private void Start()
     {
-        //Vector3[] Vertex = _mesh.mesh.vertices;
-        ////for (int i = 0; i < Vertex.Length; i++)
-        ////{
-        ////    Vertex[i].z = 0;
-        ////}
-        //_mesh.mesh.vertices = Vertex;
     }
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
 
     }
-    public void SetRotaionShpdow(Vector3 Position)
-    {
-        _shodow.LookAt(Position);
-    }
     public Vector3[] GetMeshVerticesGlobal()
     {
+        
         Vector3[] vertices = _mesh.mesh.vertices;
         for (int i = 0; i < vertices.Length; i++)
         {
@@ -38,5 +30,14 @@ public class Shadow : MonoBehaviour
     public void SetMeshVertices(Vector3[] vertices)
     {
         _mesh.mesh.vertices = vertices;
+    }
+    public void SetPointCollider(Vector3[] point)
+    {
+        Vector2[] pointVector2 = new Vector2[point.Length];
+        for (int i = 0; i < point.Length; i++)
+        {
+            pointVector2[i] = point[i];
+        }
+        _edgeCollider.points = pointVector2;
     }
 }

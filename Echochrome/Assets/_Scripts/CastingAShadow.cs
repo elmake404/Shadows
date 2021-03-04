@@ -11,15 +11,18 @@ public class CastingAShadow : MonoBehaviour
     [SerializeField]
     private Shadow _shadow;
 
+    private float _leg 
+    { get { return _shadow.transform.position.z - _lightbulb.position.z;} }
+
     void Start()
     {
         Shading();
+        Debug.Log(_shadow.transform.position.z - _lightbulb.position.z);
     }
 
     void FixedUpdate()
     {
         Shading();
-        //_shadow.SetRotaionShpdow(_lightbulb.position);
     }
     private void Shading()
     {
@@ -31,10 +34,11 @@ public class CastingAShadow : MonoBehaviour
             Vector3 direction = (vertices[i] - _lightbulb.position);
 
             newVertices[i] = _lightbulb.position + ((direction) *
-                            ((5.68f) / direction.z));
+                            ((_leg) / direction.z));
             newVertices[i] = _shadow.transform.InverseTransformPoint(newVertices[i]);
         }
         _shadow.SetMeshVertices(newVertices);
+        _shadow.SetPointCollider(newVertices);
     }
     private Vector3[] GetMeshVerticesGlobal()
     {
