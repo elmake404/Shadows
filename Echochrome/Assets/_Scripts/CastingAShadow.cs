@@ -5,18 +5,20 @@ using UnityEngine;
 public class CastingAShadow : MonoBehaviour
 {
     [SerializeField]
-    private Transform _lightbulb;
+    private Lightbulb _lightbulb;
     [SerializeField]
     private MeshFilter _mesh;
     [SerializeField]
     private Shadow _shadow;
 
     private float _leg 
-    { get { return _shadow.transform.position.z - _lightbulb.position.z;} }
+    { get { return _shadow.transform.position.z - _lightbulb.transform.position.z;} }
 
     void Start()
     {
         Shading();
+        if (_lightbulb == null)
+            _lightbulb = FindObjectOfType<Lightbulb>();
 
     }
 
@@ -31,10 +33,11 @@ public class CastingAShadow : MonoBehaviour
 
         for (int i = 0; i < vertices.Length; i++)
         {
-            Vector3 direction = (vertices[i] - _lightbulb.position);
+            Vector3 direction = (vertices[i] - _lightbulb.transform.position);
+            if(_lightbulb.IsRays)
+            Debug.DrawRay(_lightbulb.transform.position, direction*10,Color.yellow);
 
-            Debug.DrawRay(_lightbulb.position, direction*10,Color.yellow);
-            newVertices[i] = _lightbulb.position + ((direction) *
+            newVertices[i] = _lightbulb.transform.position + ((direction) *
                             ((_leg) / direction.z));
             newVertices[i] = _shadow.InverseShodow(newVertices[i]);
         }

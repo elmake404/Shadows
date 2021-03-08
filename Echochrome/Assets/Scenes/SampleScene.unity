@@ -1011,7 +1011,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _lightbulb
       value: 
-      objectReference: {fileID: 1475490708}
+      objectReference: {fileID: 1475490704}
     - target: {fileID: 347064999256770986, guid: ec2136ed24b9f25499c28aeabdb35ba1,
         type: 3}
       propertyPath: _shadow
@@ -1057,8 +1057,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speedMove: 10
-  _limmitY: 0
-  _limmitX: 0
+  _decreaseInSensitivity: 15
+  _limitY: 5
+  _limitX: 5
+  IsRays: 0
 --- !u!135 &1475490705
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1212,7 +1214,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _lightbulb
       value: 
-      objectReference: {fileID: 1475490708}
+      objectReference: {fileID: 1475490704}
     - target: {fileID: 347064999256770986, guid: ec2136ed24b9f25499c28aeabdb35ba1,
         type: 3}
       propertyPath: _shadow
