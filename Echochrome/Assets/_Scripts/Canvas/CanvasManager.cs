@@ -5,15 +5,21 @@ using UnityEngine;
 public class CanvasManager : MonoBehaviour
 {
     #region StaticComponent
-    public static bool IsStartGeme, IsGameFlow,IsWinGame,IsLoseGame;
+    public static bool IsStartGeme, IsGameFlow, IsWinGame, IsLoseGame;
+    public static CanvasManager Instance;
     #endregion
 
     [SerializeField]
     private GameObject _menuUI, _inGameUI, _wimIU, _lostUI;
+
+    [SerializeField]
+    private int _numberForVictory;
+    private int _numberVictory;
     private void Awake()
     {
         IsWinGame = false;
         IsLoseGame = false;
+        Instance = this;
     }
     private void Start()
     {
@@ -22,16 +28,19 @@ public class CanvasManager : MonoBehaviour
             _menuUI.SetActive(true);
             IsGameFlow = true;
         }
+        else
+        {
+            IsGameFlow = true;
+        }
     }
 
     private void Update()
     {
-        if (!_inGameUI.activeSelf && IsStartGeme)
+        if (!_inGameUI.activeSelf && IsStartGeme && IsGameFlow)
         {
-            _menuUI.SetActive(false);
             _inGameUI.SetActive(true);
         }
-        if (!_wimIU.activeSelf&& IsWinGame)
+        if (!_wimIU.activeSelf && IsWinGame)
         {
             _inGameUI.SetActive(false);
             _wimIU.SetActive(true);
@@ -42,4 +51,6 @@ public class CanvasManager : MonoBehaviour
             _lostUI.SetActive(true);
         }
     }
+
+    //public void 
 }

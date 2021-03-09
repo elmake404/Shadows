@@ -18,17 +18,25 @@ public class Lightbulb : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (CanvasManager.IsGameFlow)
         {
-            _currentLightbulbPos = transform.position;
-            _startMosePos = Input.mousePosition / _decreaseInSensitivity;
-        }
-        else if (Input.GetMouseButton(0))
-        {
-            _currentMosePos = Input.mousePosition / _decreaseInSensitivity;
-            Vector3 pos = LimitCheck(_currentLightbulbPos + (_currentMosePos - _startMosePos));
+            if (Input.GetMouseButtonDown(0))
+            {
+                _currentLightbulbPos = transform.position;
+                _startMosePos = Input.mousePosition / _decreaseInSensitivity;
+            }
+            else if (Input.GetMouseButton(0))
+            {
+                if (_startMosePos==Vector3.zero)
+                {
+                    _currentLightbulbPos = transform.position;
+                    _startMosePos = Input.mousePosition / _decreaseInSensitivity;
+                }
+                _currentMosePos = Input.mousePosition / _decreaseInSensitivity;
+                Vector3 pos = LimitCheck(_currentLightbulbPos + (_currentMosePos - _startMosePos));
 
-            transform.position = Vector3.Lerp(transform.position, pos, _speedMove * Time.deltaTime);
+                transform.position = Vector3.Lerp(transform.position, pos, _speedMove * Time.deltaTime);
+            }
         }
     }
 
