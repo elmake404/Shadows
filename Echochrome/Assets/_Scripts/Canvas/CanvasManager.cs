@@ -14,7 +14,9 @@ public class CanvasManager : MonoBehaviour
 
     [SerializeField]
     private int _numberForVictory;
-    private int _numberVictory;
+    [SerializeField]
+    private float _accelerationOfTime; public float AccelerationOfTime { get { return _accelerationOfTime; } }
+
     private void Awake()
     {
         IsWinGame = false;

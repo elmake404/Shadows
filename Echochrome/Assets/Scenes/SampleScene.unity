@@ -1384,8 +1384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27c488f40be2c14c852edc5f6fc5260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMove: 10
-  _decreaseInSensitivity: 25
+  _speedMove: 5
+  _decreaseInSensitivity: 40
   _limitY: 5
   _limitX: 5
   IsRays: 0
@@ -1583,7 +1583,7 @@ PrefabInstance:
     - target: {fileID: 3229730334159739039, guid: 0a5977a41716af548a57df5683b8ff56,
         type: 3}
       propertyPath: _numberForVictory
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a5977a41716af548a57df5683b8ff56, type: 3}
@@ -1791,6 +1791,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2390464442073837235, guid: 745fdd6dc3301eb499760cf6c4921972,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 23941c30b483e01499f3474e5af409e0, type: 2}
     - target: {fileID: 2390464443238315468, guid: 745fdd6dc3301eb499760cf6c4921972,
         type: 3}
       propertyPath: m_Name
