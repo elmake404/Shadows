@@ -40,11 +40,9 @@ public class CanvasManager : MonoBehaviour
         {
             _inGameUI.SetActive(true);
         }
-        if (!_wimIU.activeSelf && IsWinGame)
-        {
-            _inGameUI.SetActive(false);
-            _wimIU.SetActive(true);
-        }
+        //if (!_wimIU.activeSelf && IsWinGame)
+        //{
+        //}
         if (!_lostUI.activeSelf && IsLoseGame)
         {
             _inGameUI.SetActive(false);
@@ -52,5 +50,14 @@ public class CanvasManager : MonoBehaviour
         }
     }
 
-    //public void 
+    public void BallCounter()
+    {
+        _numberForVictory--;
+        if (_numberForVictory<=0)
+        {
+            IsWinGame = true;
+            _inGameUI.SetActive(false);
+            _wimIU.SetActive(true);
+        }
+    }
 }

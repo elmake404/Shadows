@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.tag=="Finish")
+        if (collision.tag=="Finish")
         {
-
+            CanvasManager.Instance.BallCounter();
+            enabled = false;
         }
     }
 }
