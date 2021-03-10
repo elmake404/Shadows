@@ -32,6 +32,7 @@ public class SpawnBalls : MonoBehaviour
     }
     private IEnumerator SpawnSpher()
     {
+        GameObject ballContainer = new GameObject();
         int namberSpawn = 0;
         for (int i = 0; i < _spawnPoints.Length; i++)
         {
@@ -41,7 +42,8 @@ public class SpawnBalls : MonoBehaviour
         while (namberSpawn < _quantitySpawnObj)
         {
             Vector3 PosSpawn = GetRandomPosSpawn();
-            Instantiate(_objSpawn, PosSpawn, Quaternion.identity);
+            Transform ball= Instantiate(_objSpawn, PosSpawn, Quaternion.identity).transform;
+            ball.SetParent(ballContainer.transform);
             namberSpawn++;
 
             yield return new WaitForSeconds(_timeBetweenSpawn);

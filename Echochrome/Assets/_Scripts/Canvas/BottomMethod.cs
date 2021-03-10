@@ -7,6 +7,7 @@ public class BottomMethod : MonoBehaviour
 {
     public void StartSpawn()
     {
+        CanvasManager.IsGameFlow = false;
         SpawnBalls.Instance.StartSpawn();
     }
     public void RestartLevel()
