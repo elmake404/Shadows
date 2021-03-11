@@ -6,6 +6,9 @@ public class Lightbulb : MonoBehaviour
 {
     private Vector3 _startMosePos, _currentMosePos, _startLightbulbPos, _currentLightbulbPos;
     [SerializeField]
+    private Transform _wall;public Transform Wall 
+    { get { return _wall; } }
+    [SerializeField]
     private float _speedMove, _decreaseInSensitivity, _limitY, _limitX;
 
     public bool IsRays;
@@ -53,5 +56,10 @@ public class Lightbulb : MonoBehaviour
 
 
         return posLightbulb;
+    }
+
+    public Vector3 GetPositionDifference()
+    {
+        return _startLightbulbPos - transform.position;
     }
 }

@@ -21,8 +21,7 @@ public class Shadow : MonoBehaviour
     {
        return  _shadow.InverseTransformPoint(position);
     }
-    public Vector3[] GetMeshVerticesGlobal()
-    {
+    public Vector3[] GetMeshVerticesGlobal()    {
         
         Vector3[] vertices = _mesh.mesh.vertices;
         for (int i = 0; i < vertices.Length; i++)
