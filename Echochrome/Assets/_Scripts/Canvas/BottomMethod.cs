@@ -7,9 +7,7 @@ public class BottomMethod : MonoBehaviour
 {
     public void StartSpawn()
     {
-        CanvasManager.IsGameFlow = false;
-        SpawnBalls.Instance.StartSpawn();
-        Time.timeScale = CanvasManager.Instance.AccelerationOfTime;
+        CanvasManager.Instance.ReleaseBalls();
     }
     public void RestartLevel()
     {

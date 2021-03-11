@@ -9,7 +9,7 @@ public class CastingAShadow : MonoBehaviour
     [SerializeField]
     private MeshFilter _mesh;
     [SerializeField]
-    private Shadow _shadow, _shadowCorridor;
+    private Shadow _shadow/*, _shadowCorridor*/;
 
     private float _leg 
     { get { return _lightbulb.Wall.position.z - _lightbulb.transform.position.z - _lightbulb.Wall.localScale.z/1.9f; } }

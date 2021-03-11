@@ -11,6 +11,8 @@ public class CanvasManager : MonoBehaviour
 
     [SerializeField]
     private GameObject _menuUI, _inGameUI, _wimIU, _lostUI;
+    [SerializeField]
+    private GameObject _plank;
 
     [SerializeField]
     private int _numberForVictory;
@@ -55,11 +57,18 @@ public class CanvasManager : MonoBehaviour
     public void BallCounter()
     {
         _numberForVictory--;
-        if (_numberForVictory<=0)
+        if (_numberForVictory <= 0)
         {
             IsWinGame = true;
             _inGameUI.SetActive(false);
             _wimIU.SetActive(true);
         }
     }
+    public void ReleaseBalls()
+    {
+        IsGameFlow = false;
+        _plank.SetActive(false);
+        Time.timeScale = AccelerationOfTime;
+    }
+
 }
