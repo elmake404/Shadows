@@ -10,8 +10,20 @@ public class Shadow : MonoBehaviour
     private MeshFilter _mesh;
     [SerializeField]
     private EdgeCollider2D _edgeCollider;
+    [SerializeField]
+    private PhysicsMaterial2D _bounceMaterial;
+
+
+    [SerializeField]
+    private bool _isBounce;
+
     private void Start()
     {
+        if (_isBounce)
+        {
+            _edgeCollider.sharedMaterial = _bounceMaterial;
+        }
+
     }
     private void FixedUpdate()
     {

@@ -1254,6 +1254,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2390464443238315466, guid: 745fdd6dc3301eb499760cf6c4921972,
+        type: 3}
+      propertyPath: _isBounce
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2390464443238315468, guid: 745fdd6dc3301eb499760cf6c4921972,
         type: 3}
       propertyPath: m_Name

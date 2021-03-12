@@ -48,7 +48,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2390464442073837237}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -145,3 +145,5 @@ MonoBehaviour:
   _shadow: {fileID: 2390464442073837234}
   _mesh: {fileID: 2390464442073837233}
   _edgeCollider: {fileID: 2390464442073837235}
+  _bounceMaterial: {fileID: 6200000, guid: 23941c30b483e01499f3474e5af409e0, type: 2}
+  _isBounce: 0

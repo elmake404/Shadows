@@ -10,14 +10,15 @@ public class CastingAShadow : MonoBehaviour
     private MeshFilter _mesh;
     [SerializeField]
     private Shadow _shadow/*, _shadowCorridor*/;
-
     private float _leg 
     { get { return _lightbulb.Wall.position.z - _lightbulb.transform.position.z - _lightbulb.Wall.localScale.z/1.9f; } }
+
 
     void Start()
     {
         if (_lightbulb == null)
             _lightbulb = FindObjectOfType<Lightbulb>();
+
 
         Shading();
         //ShadowCorridor();
