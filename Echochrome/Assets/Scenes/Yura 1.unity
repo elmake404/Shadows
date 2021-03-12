@@ -466,21 +466,6 @@ PrefabInstance:
       propertyPath: _limitY
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 197933258297612604, guid: 6d0ea1d39b9d5ee4189541a4c7501e4a,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 197933258297612604, guid: 6d0ea1d39b9d5ee4189541a4c7501e4a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 197933258297612604, guid: 6d0ea1d39b9d5ee4189541a4c7501e4a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d0ea1d39b9d5ee4189541a4c7501e4a, type: 3}
 --- !u!114 &166612931 stripped
@@ -1249,11 +1234,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1147430347}
     m_Modifications:
-    - target: {fileID: 2390464442073837232, guid: 745fdd6dc3301eb499760cf6c4921972,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2390464443238315468, guid: 745fdd6dc3301eb499760cf6c4921972,
         type: 3}
       propertyPath: m_Name
@@ -2875,11 +2855,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1147430347}
     m_Modifications:
-    - target: {fileID: 2390464442073837232, guid: 745fdd6dc3301eb499760cf6c4921972,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2390464443238315468, guid: 745fdd6dc3301eb499760cf6c4921972,
         type: 3}
       propertyPath: m_Name
@@ -3805,19 +3780,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 4864984119239396973, guid: 52df513e6a2996445989872e3222f748,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4864984119239396976, guid: 52df513e6a2996445989872e3222f748,
         type: 3}
       propertyPath: m_CastShadows
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864984119239396976, guid: 52df513e6a2996445989872e3222f748,
-        type: 3}
-      propertyPath: m_ReceiveShadows
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4864984119239396978, guid: 52df513e6a2996445989872e3222f748,
